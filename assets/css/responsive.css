@@ -44,6 +44,14 @@
 }
 
 @media screen and (max-width: 990px) {
+    .app-testing-services .row {
+        flex-direction: column-reverse;
+    }
+
+    .app-marketing img, .app-testing-services img {
+        margin-top: 30px;
+    }
+
     .top-content video {
         width: 100%;
     }
