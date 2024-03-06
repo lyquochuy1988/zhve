@@ -9,6 +9,20 @@
     /* --secondary: #0b33d0; */
     /* --primary: #f26e24;
     --secondary: #d68223; */
+    /* --bg-color: #0A0A0A; */
+    --bg-color: #1C1C24;
+    --bg-header-color: #111111;
+    --bg-header-color: #141313;
+
+    --second-text-color: #C8C8C8;
+    --icon-bg-color-1: #4B5CD1;
+    --icon-bg-color-2: #EB8251;
+    --orange-color: #EC8453;
+    --green-color: #79D861;
+    --blue-color: #1E75FF;
+    --purple-color: #5366E9;
+    --grey-color: #35373E;
+
     --primary: #E97400;
     --secondary: #c97017;
 
@@ -23,8 +37,14 @@
     --p-color: #505667;
 }
 
+
+
 body {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    background: var(--bg-color);
 }
 
 .btn {
@@ -93,14 +113,21 @@ ul li {
     color: rgba(0,0,0,.8);
 }
 
+p.section-desc {
+    border-left: 2px solid rgb(41, 41, 50, 1);
+    padding-left: 20px;
+}
+
 header {
     /* height: 80px; */
-    background: var(--white-color);
+    background: var(--bg-color);
     transition: all 200ms ease;
 }
 
 body.fixed header {
     /* background: rgba(255, 255, 255, 0.9); */
+    /* background: var(--bg-header-color); */
+    background: rgb(17, 17, 17, 0.97);
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
     position: fixed;
     top: 0;
@@ -114,7 +141,7 @@ header ul {
 }
 
 header a {
-    color: var(--text-black);
+    color: var(--second-text-color);
     text-decoration: none;
 }
 
@@ -128,6 +155,7 @@ header .menu li {
 
 header .logo img{
     width: 60px;
+    border-radius: 999px;
 }
 
 header .logo a,
@@ -228,7 +256,8 @@ header img.google-play-badge {
 
 @media all and (min-width: 410px) {
     header .logo img {
-        width: 50px;
+        width: 90px;
+        border-radius: 999px;
     }
 
     header .show-mobile a {
@@ -376,7 +405,7 @@ header img.google-play-badge {
 
 .aside-inner {
     position: sticky;
-    top: 80px;
+    top: 140px;
 }
 
 .main-content {
@@ -393,10 +422,10 @@ header img.google-play-badge {
 }
 
 .inner-hashtag ul li a {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.4;
-    color: rgba(0,0,0,.7);
+    color: var(--white-color);
     padding-top: 14px;
     display: block;
 }
@@ -417,10 +446,11 @@ header img.google-play-badge {
 }
 
 .top-content .slogon {
-    font-size: 36px;
-    color: var(--title-color);
-    letter-spacing: -1px;
-    line-height: 50px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 50px;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    line-height: 62px;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -432,12 +462,19 @@ header img.google-play-badge {
 }
 
 .left-top .wrap-paragraph-top p {
+    color: var(--second-text-color);
     margin-bottom: 10px;
     line-height: 30px;
     font-size: 16px;
 }
 
+.left-top .wrap-paragraph-top p i {
+    color: var(--primary);
+    padding-right: 10px;
+}
+
 .left-top p {
+    color: var(--second-text-color);
     font-size: 16px;
     line-height: 28px;
 }
@@ -449,7 +486,11 @@ p.small {
 
 .top-feature .section-desc.small {
     max-width: 900px;
+    color: var(--white-color);
+    border-left: 2px solid rgba(227, 227, 238, 0.8);
 }
+
+
 
 .left-top p span {
     font-weight: 500;
@@ -457,13 +498,14 @@ p.small {
 
 .left-top .btn {
     display: inline-block;
-    margin-top: 30px;
-    padding: 16px 36px;
-    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
 .right-top img {
     width: 100%;
+    border-radius: 8px;
 }
 
 .right-top video:hover {
@@ -479,13 +521,19 @@ p.small {
     margin-top: 100px;
 }
 
+.top-feature .section-content-wrap {
+    margin-top: 90px;
+}
+
 .top-feature h2.top-feature__subtitle {
+    /* margin-bottom: 50px; */
+    font-family: "DM Sans", sans-serif;
     font-size: 40px;
-    color: var(--title-color);
+    color: var(--white-color);
     margin: 20px 0 70px;
-    text-align: left;
+    text-align: center;
     font-weight: 500;
-    width: 490px;
+    /* width: 490px; */
     line-height: 50px;
 }
 
@@ -511,6 +559,10 @@ p.small {
     justify-self: start;
     position: relative;
     width: 100%;
+    border-radius: 8px;
+    border: 1px solid #292932;
+    min-height: 280px;
+    padding: 30px;
 }
 
 .top-feature__title {
@@ -521,13 +573,70 @@ p.small {
 }
 
 .top-feature__desc {
-    color: var(--p-color);
+    color: var(--second-text-color);
     line-height: 30px;
 }
 
 .top-feature__desc span.big {
     font-weight: 600;
 }
+
+.top-feature .section-content {
+    background-color: var(--icon-bg-color-1);
+    padding: 40px 30px;
+    border-radius: 12px;
+}
+
+/* App Reviews Service */
+.app-reviews-service .top-feature__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+.app-reviews-service .top-feature__desc {
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+
+.app-reviews-service .top-feature__info {
+    align-self: start;
+    flex: none;
+    height: auto;
+    justify-self: start;
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #292932;
+    min-height: 368px;
+    padding: 30px;
+}
+
+.app-reviews-service .top-feature__info p i.fa-quote-left {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+
+.app-reviews-service .top-feature__info.orange {
+    background-color: var(--orange-color);
+}
+
+.app-reviews-service .top-feature__info.purple {
+    background-color: var(--purple-color);
+}
+
+.app-reviews-service .top-feature__info.blue {
+    background-color: var(--blue-color);
+}
+
+.app-reviews-service .top-feature__info.grey {
+    background-color: var(--grey-color);
+}
+
 
 /* App Maketing */
 .app-marketing, .app-testing-services {
@@ -539,10 +648,19 @@ p.small {
     align-items: center;
 }
 
+.app-marketing p i.fa-cloud-download {
+    margin-bottom: 20px;
+    background: var(--icon-bg-color-1);
+    color: white;
+    font-size: 36px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .app-marketing h2, .app-testing-services h2 {
     font-size: 24px;
     line-height: 30px;
-    color: var(--title-color);
+    color: var(--white-color);
     margin-bottom: 30px;
     text-align: left;
     font-weight: 600;
@@ -550,14 +668,26 @@ p.small {
 
 .app-marketing img {
     max-width: 100%;
+    border-radius: 8px;
 }
 
 .app-marketing p.section-desc, .app-testing-services p.section-desc{
+    color: var(--second-text-color);
     line-height: 30px;
+}
+
+.app-testing-services p i.fa-puzzle-piece {
+    margin-bottom: 20px;
+    background: var(--icon-bg-color-2);
+    color: white;
+    font-size: 36px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .app-testing-services img {
     max-width: 100%;
+    border-radius: 8px;
 }
 
 /* Zhve Services */
@@ -565,6 +695,22 @@ p.small {
     margin-top: 80px;
 }
 
+.zhve-services .section-content {
+    background-color: var(--icon-bg-color-2);
+    padding: 40px 30px;
+    border-radius: 12px;
+}
+
+.zhve-services .fa-quote-left {
+    font-size: 40px;
+    color: var(--icon-bg-color-1);
+    margin-bottom: 20px;
+}
+
+.zhve-services .section-content p.section-desc {
+    color: var(--white-color);
+    border-left: 2px solid rgba(227, 227, 238, 0.8);
+}
 
 /* Section Faq */
 .section-faq {
@@ -573,12 +719,16 @@ p.small {
 
 .section-faq h2 {
     font-size: 40px;
-    color: var(--title-color);
-    margin: 20px 0 70px;
-    text-align: left;
+    color: var(--white-color);
+    margin: 30px 0 70px;
+    text-align: center;
     font-weight: 500;
-    width: 490px;
+    /* width: 490px; */
     line-height: 50px;
+}
+
+.section-faq h3 {
+    color: var(--white-color);
 }
 
 .section-faq h3, .section-faq p.section-desc {
@@ -586,8 +736,10 @@ p.small {
 }
 
 .section-faq p.section-desc {
+    color: var(--second-text-color);
     margin-bottom: 20px;
     line-height: 28px;
+    border-left: 2px solid rgba(233, 116, 0, 0.8);
 }
 
 /* Main Feature */
@@ -647,15 +799,21 @@ p.small {
 .section-content h1 {
     font-size: 28px;
     font-weight: 500;
-    color: var(--title-color);
+    color: var(--white-color);
     padding: 90px 0 20px;
     line-height: 40px;
 }
+
+.section-content p.refund i {
+    color: var(--icon-bg-color-2);
+    font-size: 44px;
+}
+
 .section-content h2 {
     font-size: 24px;
     font-weight: 500;
-    color: var(--title-color);
-    padding: 90px 0 20px;
+    color: var(--white-color);
+    padding: 0px 0 20px;
     line-height: 40px;
 }
 
@@ -669,6 +827,7 @@ p.small {
 }
 
 .section-content p.section-desc {
+    color: var(--second-text-color);
     line-height: 32px;
     margin-bottom: 10px;
     max-width: 100%;
@@ -715,23 +874,44 @@ p.small {
     text-align: center;
 }
 
+.main-content.app-promotion-mastery .section-content p.bold {
+    color: var(--white-color);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.main-content.app-promotion-mastery .section-content h3 {
+    color: var(--white-color);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.main-content.app-promotion-mastery .section-content p {
+    color: var(--second-text-color);
+}
+
+.main-content.app-promotion-mastery .section-content h2 {
+    margin-top: 100px;
+}
+
 /* FOOTER */
 footer {
     color: white;
     margin-top: 35px;
     height: 164px;
-    background: #1d1e1f;
+    /* background: #1d1e1f; */
     padding-top: 36px;
     text-align: center;
 }
 
 
-
 footer .footer__logo {
-    width: 60px;
+    width: 90px;
+    border-radius: 999px;
 }
 
 footer h3 {
+    color: var(--primary);
     margin-bottom: 14px;
     font-weight: 500;
     font-size: 16px;
@@ -743,7 +923,8 @@ footer ul li {
 
 footer ul li a {
     text-decoration: none;
-    color: #9b9b9b;
+    /* color: #9b9b9b; */
+    color: var(--second-text-color);
     font-size: 13px;
     width: 100px;
     font-weight: 500;
@@ -754,7 +935,7 @@ footer ul li a {
     height: 38px;
     line-height: 38px;
     font-size: 13px;
-    color: #9b9b9b;
+    color: var(--second-text-color);
     letter-spacing: 0;
     text-align: center;
     background: #2c3137;
@@ -893,6 +1074,33 @@ img.super-screen-recorder:nth-child(3) {
     font-size: 24px;
     color: var(--title-color);
     margin-bottom: 20px;
+}
+
+.content-page.content-privacy h4.bold {
+    color: var(--white-color);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 36px;
+}
+
+.content-page.content-privacy p.bold {
+    color: var(--white-color);
+}
+
+.content-page.content-privacy p {
+    color: var(--second-text-color);
+}
+
+.content-page.content-privacy p a {
+    color: var(--primary);
+}
+
+.content-page.content-privacy .list-list li {
+    color: var(--second-text-color);
+}
+
+.content-page.content-privacy .number-list li {
+    color: var(--second-text-color);
 }
 
 .content-page h4.italic {
