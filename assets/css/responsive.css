@@ -1,3 +1,27 @@
+@media screen and (max-width: 1700px) {
+    .app-reviews-service .top-feature__info {
+        min-height: 560px;
+    }
+}
+
+@media screen and (max-width: 1640px) {
+    .app-reviews-service .top-feature__info {
+        min-height: 590px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .app-reviews-service .top-feature__info {
+        min-height: 620px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .app-reviews-service .top-feature__info {
+        min-height: 660px;
+    }
+}
+
 @media screen and (max-width: 1460px) {
     .main-feature__inner {
         gap: 20px;
@@ -31,6 +55,36 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .app-reviews-service .top-feature__info {
+        min-height: 700px;
+    }
+
+    .app-reviews-service .top-feature__info.blue {
+        min-height: 820px;
+    }
+}
+
+@media screen and (max-width: 1101px) {
+    .btn-submit + .btn-submit {
+        margin-left: 8px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .app-reviews-service .top-feature__info {
+        min-height: 800px;
+    }
+
+    .app-reviews-service .top-feature__info.blue {
+        min-height: 970px;
+    }
+
+    .btn-submit + .btn-submit {
+        margin-left: 1px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .main-feature__inner {
         gap: 20px;
@@ -44,6 +98,14 @@
 }
 
 @media screen and (max-width: 990px) {
+    .app-reviews-service .top-feature__info {
+        min-height: 500px;
+    }
+
+    .app-reviews-service .top-feature__info.blue {
+        min-height: 500px;
+    }
+
     .app-testing-services .row {
         flex-direction: column-reverse;
     }

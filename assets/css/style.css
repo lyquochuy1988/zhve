@@ -67,6 +67,28 @@ body {
     background: linear-gradient(90deg, var(--hover-button-1) 0%, var(--hover-button-2) 87%);
 }
 
+.btn-submit {
+    background: var(--white-color);
+    border: 1px var(--white-color) solid;
+    border-radius: 5px;
+    box-shadow: none;
+    color: var(--bg-header-color);
+    transition: all 200ms ease;
+
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 20px;
+    font-size: 16px;
+}
+
+.btn-submit + .btn-submit {
+    margin-left: 12px;
+}
+
+.btn-submit:hover {
+    background: var(--second-text-color);
+}
+
 a {
     text-decoration: none;
 }
@@ -484,6 +506,11 @@ p.small {
     font-weight: 500;
 }
 
+p.super-small {
+    font-size: 13px;
+    font-weight: 500;
+}
+
 .top-feature .section-desc.small {
     max-width: 900px;
     color: var(--white-color);
@@ -566,7 +593,7 @@ p.small {
 }
 
 .top-feature__title {
-    font-size: 48px;
+    font-size: 46px;
     font-weight: 500;
     color: var(--primary);
     margin-bottom: 20px;
@@ -592,13 +619,15 @@ p.small {
     font-size: 20px;
     font-weight: 600;
     color: var(--white-color);
-    margin-bottom: 20px;
-    line-height: 30px;
+    margin-bottom: 16px;
+    line-height: 26px;
 }
 
 .app-reviews-service .top-feature__desc {
     color: var(--white-color);
     font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
 }
 
 
@@ -611,7 +640,7 @@ p.small {
     width: 100%;
     border-radius: 8px;
     border: 1px solid #292932;
-    min-height: 368px;
+    min-height: 536px;
     padding: 30px;
 }
 
@@ -688,6 +717,16 @@ p.small {
 .app-testing-services img {
     max-width: 100%;
     border-radius: 8px;
+}
+
+/* Video Creation */
+p i.fa-play-circle-o {
+    margin-bottom: 20px;
+    background: red;
+    color: white;
+    font-size: 36px;
+    padding: 10px 12px;
+    border-radius: 10px;
 }
 
 /* Zhve Services */
